@@ -360,8 +360,8 @@ main {
   }
 
   .logo {
-    width: 139px;
-    height: 24px;
+    width: 149px;
+    height: 34px;
     object-fit: cover;
   }
 
@@ -387,7 +387,7 @@ main {
     background-color: #66bcff;
     border-radius: 4px;
     justify-content: space-between;
-    width: 180px;
+    width: 170px;
     height: 30px;
   }
 
