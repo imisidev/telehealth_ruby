@@ -38,7 +38,7 @@
         </div>
       </div>
       <div class="content">
-        <div class="content_cont_row">
+        <div class="content_cont_row" id="m1">
           <div class="content_cont">
             <%= image_tag 'mh2.svg', alt: 'lc1' %>
             <div>
@@ -46,21 +46,21 @@
               <span class="content_cont_t2">Care, Consulting, consulting</span>
             </div>
           </div>
-          <div class="content_cont">
+          <div class="content_cont" id="m2">
             <%= image_tag 'mh3.svg', alt: 'lc2' %>
             <div>
               <span class="content_cont_t1">Life coaches</span>
               <span class="content_cont_t2">Psychiatrists, psychologists, Therapists</span>
             </div>
           </div>
-          <div class="content_cont">
+          <div class="content_cont" id="m3">
             <%= image_tag 'mh4.svg', alt: 'lc1' %>
             <div>
               <span class="content_cont_t1">Family Counselors</span>
               <span class="content_cont_t2">life guides, people discovering their talent and potential</span>
             </div>
           </div>
-          <div class="content_cont">
+          <div class="content_cont" id="m4">
             <%= image_tag 'mh5.svg', alt: 'lc2' %>
             <div>
               <span class="content_cont_t1">Psychiatrists, phycologists and Therapists*</span>
@@ -120,5 +120,27 @@
         <span>© 2024 Telehealth Today, LLC. All Rights Reserved.</span>
       </div>
     </footer>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('m1').addEventListener('click', function() {
+          window.location.href = "<%= doctors_path %>";
+        });
+      });
+       document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('m2').addEventListener('click', function() {
+          window.location.href = "<%= doctors_path %>";
+        });
+      });
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('m3').addEventListener('click', function() {
+          window.location.href = "<%= doctors_path %>";
+        });
+      });
+        document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('m4').addEventListener('click', function() {
+          window.location.href = "<%= doctors_path %>";
+        });
+      });
+    </script>
   </body>
 </html>

@@ -40,14 +40,14 @@
 
       <div class="content">
         <div class="content_cont_row">
-          <div class="content_cont">
+          <div class="content_cont" id="physical">
             <%= image_tag 'hc2.svg', alt: 'lc1' %>
             <div>
               <span class="content_cont_t1">Physical Health</span>
               <span class="content_cont_t2">Standard Care, Preventive Care</span>
             </div>
           </div>
-          <div class="content_cont2">
+          <div class="content_cont2" id="mental">
             <%= image_tag 'hc3.svg', alt: 'lc2' %>
             <div>
               <span class="content_cont_t1">Mental Health</span>
@@ -107,5 +107,18 @@
         <span>© 2024 Telehealth Today, LLC. All Rights Reserved.</span>
       </div>
     </footer>
+
+         <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('physical').addEventListener('click', function() {
+          window.location.href = "<%= physicalhealth_path %>";
+        });
+      });
+       document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('mental').addEventListener('click', function() {
+          window.location.href = "<%= mentalhealth_path %>";
+        });
+      });
+    </script>
   </body>
 </html>

@@ -48,14 +48,14 @@
       <div class="content">
         <span class="content_title">Choose Who you want to talk to</span>
         <div class="content_cont_row">
-          <div class="content_cont">
+          <div class="content_cont" id="financialheight">
             <%= image_tag 'lc1.png', alt: 'lc1' %>
-            <div id="financialheight">
+            <div>
               <span class="content_cont_t1">Financial Health</span>
               <span class="content_cont_t2">Standard Care, Preventive Care</span>
             </div>
           </div>
-          <div class="content_cont">
+          <div class="content_cont" id="healthcare">
             <%= image_tag 'lc2.png', alt: 'lc2' %>
             <div>
               <span class="content_cont_t1">Healthcare</span>
@@ -119,6 +119,11 @@
       document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('financialheight').addEventListener('click', function() {
           window.location.href = "<%= financialhealth_path %>";
+        });
+      });
+       document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('healthcare').addEventListener('click', function() {
+          window.location.href = "<%= healthcare_path %>";
         });
       });
     </script>

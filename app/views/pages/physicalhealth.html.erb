@@ -39,42 +39,42 @@
       </div>
       <div class="content">
         <div class="content_cont_row">
-          <div class="content_cont">
+          <div class="content_cont" id="p1">
             <%= image_tag 'ph1.svg', alt: 'lc1' %>
             <div>
               <span class="content_cont_t1">General Practitioners</span>
               <span class="content_cont_t2">Care, Consulting, consulting</span>
             </div>
           </div>
-          <div class="content_cont">
+          <div class="content_cont" id="p2">
             <%= image_tag 'ph2.svg', alt: 'lc2' %>
             <div>
               <span class="content_cont_t1">Nurses</span>
               <span class="content_cont_t2">Psychiatrists, psychologists, Therapists</span>
             </div>
           </div>
-          <div class="content_cont">
+          <div class="content_cont" id="p3">
             <%= image_tag 'ph3.svg', alt: 'lc1' %>
             <div>
               <span class="content_cont_t1">Dietitians and Nutritionists</span>
               <span class="content_cont_t2">life guides, people discovering their talent and potential</span>
             </div>
           </div>
-          <div class="content_cont">
+          <div class="content_cont" id="p4">
             <%= image_tag 'ph4.svg', alt: 'lc2' %>
             <div>
               <span class="content_cont_t1">Dentists</span>
               <span class="content_cont_t2">Care, Consulting, consulting</span>
             </div>
           </div>
-          <div class="content_cont">
+          <div class="content_cont" id="p5">
             <%= image_tag 'ph5.svg', alt: 'lc1' %>
             <div>
               <span class="content_cont_t1">Veterinarians</span>
               <span class="content_cont_t2">Psychiatrists, psychologists, Therapists</span>
             </div>
           </div>
-          <div class="content_cont">
+          <div class="content_cont" id="p6">
             <%= image_tag 'ph6.svg', alt: 'lc2' %>
             <div>
               <span class="content_cont_t1">Fitness Experts</span>
@@ -134,5 +134,37 @@
         <span>© 2024 Telehealth Today, LLC. All Rights Reserved.</span>
       </div>
     </footer>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('p1').addEventListener('click', function() {
+          window.location.href = "<%= doctors_path %>";
+        });
+      });
+       document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('p2').addEventListener('click', function() {
+          window.location.href = "<%= doctors_path %>";
+        });
+      });
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('p3').addEventListener('click', function() {
+          window.location.href = "<%= doctors_path %>";
+        });
+      });
+        document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('p4').addEventListener('click', function() {
+          window.location.href = "<%= doctors_path %>";
+        });
+      });
+       document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('p5').addEventListener('click', function() {
+          window.location.href = "<%= doctors_path %>";
+        });
+      });
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('p6').addEventListener('click', function() {
+          window.location.href = "<%= doctors_path %>";
+        });
+      });
+    </script>
   </body>
 </html>

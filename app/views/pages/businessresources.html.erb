@@ -39,21 +39,21 @@
       </div>
       <div class="content">
         <div class="content_cont_row">
-          <div class="content_cont2">
+          <div class="content_cont2" id="virtual">
             <%= image_tag 'br1.svg', alt: 'lc1' %>
             <div>
               <span class="content_cont_t1">Virtual Assistants</span>
               <span class="content_cont_t2">Care, Consulting, consulting</span>
             </div>
           </div>
-          <div class="content_cont2">
+          <div class="content_cont2" id="health">
             <%= image_tag 'br2.svg', alt: 'lc2' %>
             <div>
               <span class="content_cont_t1">Computer Health</span>
               <span class="content_cont_t2">Psychiatrists, psychologists, Therapists</span>
             </div>
           </div>
-          <div class="content_cont2">
+          <div class="content_cont2" id="social">
             <%= image_tag 'br3.svg', alt: 'lc2' %>
             <div>
               <span class="content_cont_t1">Social Media Influencers</span>
@@ -113,5 +113,23 @@
         <span>© 2024 Telehealth Today, LLC. All Rights Reserved.</span>
       </div>
     </footer>
+
+         <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('virtual').addEventListener('click', function() {
+          window.location.href = "<%= doctors_path %>";
+        });
+      });
+       document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('health').addEventListener('click', function() {
+          window.location.href = "<%= doctors_path %>";
+        });
+      });
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('social').addEventListener('click', function() {
+          window.location.href = "<%= doctors_path %>";
+        });
+      });
+    </script>
   </body>
 </html>

@@ -40,14 +40,14 @@
 
       <div class="content">
         <div class="content_cont_row">
-          <div class="content_cont" style="border-top: 3px solid #66bcff;">
+          <div class="content_cont" id="businesscoach" style="border-top: 3px solid #66bcff;">
             <%= image_tag 'fh1.png', alt: 'lc1' %>
             <div>
               <span class="content_cont_t1">Business Coaches and Consultants</span>
               <span class="content_cont_t2">Standard Care, Preventive Care</span>
             </div>
           </div>
-          <div class="content_cont2">
+          <div class="content_cont2" id="businessresource">
             <%= image_tag 'fh2.png', alt: 'lc2' %>
             <div>
               <span class="content_cont_t1">Business Resources</span>
@@ -107,5 +107,18 @@
         <span>© 2024 Telehealth Today, LLC. All Rights Reserved.</span>
       </div>
     </footer>
+
+      <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('businesscoach').addEventListener('click', function() {
+          window.location.href = "<%= businesscoaches_path %>";
+        });
+      });
+       document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('businessresource').addEventListener('click', function() {
+          window.location.href = "<%= businessresources_path %>";
+        });
+      });
+    </script>
   </body>
 </html>

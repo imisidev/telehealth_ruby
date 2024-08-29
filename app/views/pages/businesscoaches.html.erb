@@ -39,21 +39,21 @@
       </div>
       <div class="content">
         <div class="content_cont_row">
-          <div class="content_cont2" style="border-top: 3px solid #66bcff;">
+          <div class="content_cont2" id="coaches" style="border-top: 3px solid #66bcff;">
             <%= image_tag 'bc1.svg', alt: 'lc1' %>
             <div>
               <span class="content_cont_t1">Coaches and Consultant</span>
               <span class="content_cont_t2">Care, Consulting, consulting</span>
             </div>
           </div>
-          <div class="content_cont2">
+          <div class="content_cont2" id="health">
             <%= image_tag 'bc2.svg', alt: 'lc2' %>
             <div>
               <span class="content_cont_t1">Legal Health</span>
               <span class="content_cont_t2">Psychiatrists, psychologists, Therapists</span>
             </div>
           </div>
-          <div class="content_cont2">
+          <div class="content_cont2" id="teachers">
             <%= image_tag 'bc3.svg', alt: 'lc2' %>
             <div>
               <span class="content_cont_t1">Teachers</span>
@@ -63,6 +63,7 @@
         </div>
       </div>
     </main>
+
     <footer class="footer">
       <div class="footer_main">
         <div class="footer_col1">
@@ -113,5 +114,23 @@
         <span>© 2024 Telehealth Today, LLC. All Rights Reserved.</span>
       </div>
     </footer>
+
+     <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('coaches').addEventListener('click', function() {
+          window.location.href = "<%= doctors_path %>";
+        });
+      });
+       document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('health').addEventListener('click', function() {
+          window.location.href = "<%= doctors_path %>";
+        });
+      });
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('teachers').addEventListener('click', function() {
+          window.location.href = "<%= doctors_path %>";
+        });
+      });
+    </script>
   </body>
 </html>
