@@ -360,8 +360,8 @@ main {
   }
 
   .logo {
-    width: 159px;
-    height: 32px;
+    width: 139px;
+    height: 24px;
     object-fit: cover;
   }
 
@@ -393,15 +393,15 @@ main {
 
   .btn_cont_divider {
     width: 1px;
-    height: 30px;
+    height: 14px;
     background-color: white;
   }
 
   .btn_cont button {
     width: 45%;
-    height: 30px;
+    height: 25px;
     color: #fffefd;
-    font-size: 18px;
+    font-size: 12px;
     font-weight: 500;
     background-color: transparent;
     border: none;
@@ -681,8 +681,9 @@ main {
   }
 
   .footer_btm span {
-    font-size: 20px;
+    font-size: 10px;
     font-weight: 500;
     color: #000000db;
+    text-align: center;
   }
 }
