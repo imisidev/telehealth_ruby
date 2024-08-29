@@ -6,7 +6,13 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbo-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+    <%= stylesheet_link_tag 'landing_page', media: 'all' %>
   </head>
+  <script>
+    document.getElementById('navigate-button').addEventListener('click', function() {
+      window.location.href = "<%= settings_path %>";
+    });
+  </script>
   <body>
     <header class="header">
       <%= image_tag 'logo.png', alt: 'Logo', class: 'logo' %>
