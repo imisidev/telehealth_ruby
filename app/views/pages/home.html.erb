@@ -40,7 +40,7 @@
           <span>
             TeleHealth Today is a new free and open marketplace that connects individual businesses and business people to clients that want to talk to them. What type of practitioners we have and the reputation of the practitioners is solely determined by our members. Using governing principles and policies that include letting our practitioners market themselves how they want, and letting the clients they speak to rate them by posting a public review. Our members can also make money by getting their friends to join as we are currently offering an 80% commission to help us launch and capture market share quickly. Click the Links above for details on any of the things mentioned and thank you for being here! 
           </span>
-          <button>
+          <button id="booking">
             Book Appointment
           </button>
         </div>
@@ -124,6 +124,11 @@
        document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('healthcare').addEventListener('click', function() {
           window.location.href = "<%= healthcare_path %>";
+        });
+      });
+       document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('booking').addEventListener('click', function() {
+          window.location.href = "<%= booking_path %>";
         });
       });
     </script>
