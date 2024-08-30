@@ -6,7 +6,7 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbo-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
-    <%= stylesheet_link_tag 'financialhealth', media: 'all' %>
+    <%= stylesheet_link_tag 'booking', media: 'all' %>
   </head>
   <body>
     <header class="header">
@@ -30,31 +30,43 @@
       </div>
     </header>
     <main>
-      <div class="content_headliner">
-        <%= image_tag 'lc1.png', alt: 'lc1' %>
-        <div>
-          <span class="content_cont_t1">Financial Health</span>
-          <span class="content_cont_t2">Standard Care, Preventive Care</span>
+      <div class="booking">
+        <div class="doctor_cont">
+          <%= image_tag 'booking.svg', alt: 'logo', class: 'doctor_img' %>
+          <div class="doctor_info">
+            <span class='doctor_name'>Leticia Meighan</span>
+            <span class='doctor_proffesion'>Funct. Med Coach/Hormone Expert</span>
+            <div>
+              <%= image_tag 'starbold.svg', alt: 'lc1' %>
+              <%= image_tag 'starbold.svg', alt: 'lc1' %>
+              <%= image_tag 'starbold.svg', alt: 'lc1' %>
+              <%= image_tag 'star.svg', alt: 'lc1' %>
+              <%= image_tag 'star.svg', alt: 'lc1' %>
+            </div>
+            <span class='doctor_t1'>Funct. Med Coach/Hormone Expert</span>
+            <span class='doctor_t2'>Funct. Med Coach/Hormone Expert</span>
+          </div>
+        </div>
+        <div class="doctor_about">
+          <div class="doctor_about_cont1">
+            <span class='doctor_name'>About</span>
+            <span class='doctor_name'>
+              My name is Leticia Meighan and I am a board certified Family Nurse Practitioner since 2012. I have over 20 years experience of working in healthcare, including emergency room, urgent care, and out patient clinics. I have been a Family Nurse Practitioner in Florida doing what I love which serving my community for ten years which includes primary care, acute care, cardiology, and gastroenterology. I have previous experience working with hospitalist in various hospitals In Miami,Florida. I can see patients that range between 16 years old and I can treat acute and chronic illnesses via telemedicine. Part of your visit will include education and healthcare recommendations.
+            </span>
+          </div>
+          <div class="doctor_about_cont2">
+            <%= image_tag 'calendar.svg', alt: 'logo', class: 'calendar' %>
+            <div class="timeslots">
+              <span>Timeslots (Times listed below are in your local timezone) No timeslot</span>
+            </div>
+            <button>Proceed</button>
+          </div>
         </div>
       </div>
-
-      <div class="content">
-        <div class="content_cont_row">
-          <div class="content_cont" id="businesscoach" style="border-top: 3px solid #66bcff;">
-            <%= image_tag 'fh1.png', alt: 'lc1' %>
-            <div>
-              <span class="content_cont_t1">Business Coaches and Consultants</span>
-              <span class="content_cont_t2">Standard Care, Preventive Care</span>
-            </div>
-          </div>
-          <div class="content_cont2" id="businessresource">
-            <%= image_tag 'fh2.png', alt: 'lc2' %>
-            <div>
-              <span class="content_cont_t1">Business Resources</span>
-              <span class="content_cont_t2">Standard Care, Preventive Care</span>
-            </div>
-          </div>
-        </div>
+      <div class="bonus">
+        <span>Get 3 free appointments and a lifelong membership to TeleHealth Today now for just $50!</span>
+        <button>Start now</button>
+        <%= image_tag 'bonus.svg', alt: 'logo', class: 'bonus_img' %>
       </div>
     </main>
     <footer class="footer">
@@ -107,9 +119,7 @@
         <span>© 2024 Telehealth Today, LLC. All Rights Reserved.</span>
       </div>
     </footer>
-
-      <script>
-      
+    <script>
       document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('businesscoach').addEventListener('click', function() {
           window.location.href = "<%= businesscoaches_path %>";

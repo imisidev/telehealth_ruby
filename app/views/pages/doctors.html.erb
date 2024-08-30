@@ -40,7 +40,7 @@
       <div class="doctors_cont">
         <span class="doctors_cont_title">Choose Your Practioner</span>
         <div class="doctor_items_wrapper">
-          <div class="doctor_item">
+          <div id="doctor_id" class="doctor_item">
             <div class="reviews">
               <%= image_tag 'dg.svg', alt: 'lc1' %>
               <span>342 reviews</span>
@@ -60,7 +60,7 @@
               </div>
             </div>
           </div>
-          <div class="doctor_item">
+          <div id="doctor_id2" class="doctor_item">
             <div class="reviews">
               <%= image_tag 'dg.svg', alt: 'lc1' %>
               <span>342 reviews</span>
@@ -80,7 +80,7 @@
               </div>
             </div>
           </div>
-          <div class="doctor_item">
+          <div id="doctor_id3" class="doctor_item">
             <div class="reviews">
               <%= image_tag 'dg.svg', alt: 'lc1' %>
               <span>342 reviews</span>
@@ -100,7 +100,7 @@
               </div>
             </div>
           </div>
-          <div class="doctor_item">
+          <div id="doctor_id4" class="doctor_item">
             <div class="reviews">
               <%= image_tag 'dg.svg', alt: 'lc1' %>
               <span>342 reviews</span>
@@ -120,7 +120,7 @@
               </div>
             </div>
           </div>
-          <div class="doctor_item">
+          <div id="doctor_id5" class="doctor_item">
             <div class="reviews">
               <%= image_tag 'dg.svg', alt: 'lc1' %>
               <span>342 reviews</span>
@@ -140,7 +140,7 @@
               </div>
             </div>
           </div>
-          <div class="doctor_item">
+          <div id="doctor_id6" class="doctor_item">
             <div class="reviews">
               <%= image_tag 'dg.svg', alt: 'lc1' %>
               <span>342 reviews</span>
@@ -160,7 +160,7 @@
               </div>
             </div>
           </div>
-          <div class="doctor_item">
+          <div id="doctor_id7" class="doctor_item">
             <div class="reviews">
               <%= image_tag 'dg.svg', alt: 'lc1' %>
               <span>342 reviews</span>
@@ -180,7 +180,7 @@
               </div>
             </div>
           </div>
-          <div class="doctor_item">
+          <div id="doctor_id8" class="doctor_item">
             <div class="reviews">
               <%= image_tag 'dg.svg', alt: 'lc1' %>
               <span>342 reviews</span>
@@ -253,5 +253,47 @@
         <span>© 2024 Telehealth Today, LLC. All Rights Reserved.</span>
       </div>
     </footer>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('doctor_id').addEventListener('click', function() {
+          window.location.href = "<%= booking_path %>";
+        });
+      });
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('doctor_id2').addEventListener('click', function() {
+          window.location.href = "<%= booking_path %>";
+        });
+      });
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('doctor_id3').addEventListener('click', function() {
+          window.location.href = "<%= booking_path %>";
+        });
+      });
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('doctor_id4').addEventListener('click', function() {
+          window.location.href = "<%= booking_path %>";
+        });
+      });
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('doctor_id5').addEventListener('click', function() {
+          window.location.href = "<%= booking_path %>";
+        });
+      });
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('doctor_id6').addEventListener('click', function() {
+          window.location.href = "<%= booking_path %>";
+        });
+      });
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('doctor_id7').addEventListener('click', function() {
+          window.location.href = "<%= booking_path %>";
+        });
+      });
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('doctor_id8').addEventListener('click', function() {
+          window.location.href = "<%= booking_path %>";
+        });
+      });
+    </script>
   </body>
 </html>

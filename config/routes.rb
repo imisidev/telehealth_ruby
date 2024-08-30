@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   get "physicalhealth", to: "pages#physicalhealth"
   get "mentalhealth", to: "pages#mentalhealth"
   get "doctors", to: "pages#doctors"
+  get "booking", to: "pages#booking"
 
   # Defines the root path route ("/")
   # root "posts#index"
