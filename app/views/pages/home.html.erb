@@ -116,16 +116,6 @@
       </div>
     </footer>
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        document.getElementById('financialheight').addEventListener('click', function() {
-          window.location.href = "<%= financialhealth_path %>";
-        });
-      });
-       document.addEventListener('DOMContentLoaded', function() {
-        document.getElementById('healthcare').addEventListener('click', function() {
-          window.location.href = "<%= healthcare_path %>";
-        });
-      });
        document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('booking').addEventListener('click', function() {
           window.location.href = "<%= booking_path %>";
@@ -134,3 +124,18 @@
     </script>
   </body>
 </html>
+
+      <%
+=begin%>
+ document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('financialheight').addEventListener('click', function() {
+          window.location.href = "<%= financialhealth_path %>";
+        });
+      });
+       document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('healthcare').addEventListener('click', function() {
+          window.location.href = "<%= healthcare_path %>";
+        });
+      }); 
+<%
+=end%>
