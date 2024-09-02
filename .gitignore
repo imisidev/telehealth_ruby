@@ -36,11 +36,19 @@
 .vercel
 
 # Ignore all files in app/views/pages
-app/views/pages/*
 
 # Except these files
-!app/views/pages/home.html.erb
-!app/views/pages/booking.html.erb
+app/views/pages/businessresources.html.erb
+app/views/pages/doctors.html.erb
+app/views/pages/businessresources.html.erb
+app/views/pages/financialhealth.html.erb
+app/views/pages/healthcare.html.erb
+app/views/pages/mentalhealth.html.erb
+app/views/pages/physicalhealth.html.erb
+app/views/pages/businesscoaches.html.erb
+app/views/pages/settings.html.erb
+app/views/pages/user.html.erb
+
 
 
 

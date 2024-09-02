@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Landing Page</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbo-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+    <%= stylesheet_link_tag 'booking', media: 'all' %>
+  </head>
+  <body>
+    <header class="header">
+      <%= image_tag 'logo.png', alt: 'Logo', class: 'logo' %>
+      <nav class="navbar">
+        <%= link_to 'Home', root_path %>
+        <%= link_to 'Pricing', '/about' %>
+        <%= link_to 'Revenue Share Model', '/revenue' %>
+        <%= link_to 'Becoming a Practitioner', '/practitioner' %>
+        <%= link_to 'Our Mission', '/mission' %>
+        <%= link_to 'Contact Us', '/contact' %>
+      </nav>
+      <div class="btn_cont">
+        <button>
+          Sign up
+        </button>
+        <div class="btn_cont_divider"></div>
+        <button>
+          Sign In
+        </button>
+      </div>
+    </header>
+    <main>
+      <div class="booking">
+        <div class="doctor_cont">
+          <%= image_tag 'booking.svg', alt: 'logo', class: 'doctor_img' %>
+          <div class="doctor_info">
+            <span class='doctor_name'>Leticia Meighan</span>
+            <span class='doctor_proffesion'>Funct. Med Coach/Hormone Expert</span>
+            <div>
+              <%= image_tag 'starbold.svg', alt: 'lc1' %>
+              <%= image_tag 'starbold.svg', alt: 'lc1' %>
+              <%= image_tag 'starbold.svg', alt: 'lc1' %>
+              <%= image_tag 'star.svg', alt: 'lc1' %>
+              <%= image_tag 'star.svg', alt: 'lc1' %>
+            </div>
+            <span class='doctor_t1'>Funct. Med Coach/Hormone Expert</span>
+            <span class='doctor_t2'>Funct. Med Coach/Hormone Expert</span>
+          </div>
+        </div>
+        <div class="doctor_about">
+          <div class="doctor_about_cont1">
+            <span class='doctor_name'>About</span>
+            <span class='doctor_name'>
+              My name is Leticia Meighan and I am a board certified Family Nurse Practitioner since 2012. I have over 20 years experience of working in healthcare, including emergency room, urgent care, and out patient clinics. I have been a Family Nurse Practitioner in Florida doing what I love which serving my community for ten years which includes primary care, acute care, cardiology, and gastroenterology. I have previous experience working with hospitalist in various hospitals In Miami,Florida. I can see patients that range between 16 years old and I can treat acute and chronic illnesses via telemedicine. Part of your visit will include education and healthcare recommendations.
+            </span>
+          </div>
+          <div class="doctor_about_cont2">
+            <%= image_tag 'calendar.svg', alt: 'logo', class: 'calendar' %>
+            <div class="timeslots">
+              <span>Timeslots (Times listed below are in your local timezone) No timeslot</span>
+            </div>
+            <button>Proceed</button>
+          </div>
+        </div>
+      </div>
+      <div class="bonus">
+        <span>Get 3 free appointments and a lifelong membership to TeleHealth Today now for just $50!</span>
+        <button>Start now</button>
+        <%= image_tag 'bonus.svg', alt: 'logo', class: 'bonus_img' %>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer_main">
+        <div class="footer_col1">
+          <%= image_tag 'logo.png', alt: 'logo', class: 'footer_logo' %>
+          <div>
+            <p class='social_info'>Download the app by clicking the link below</p>
+            <div>
+              <%= image_tag 'googleplay.png', alt: 'logo', class: 'app_stores' %>
+              <%= image_tag 'applestore.png', alt: 'logo', class: 'app_stores' %>
+            </div>
+          </div>
+        </div>
+        <div class="pages_col_cont">
+          <span class='footer_col_title'>Pages</span>
+          <span class='footer_page_content_text'>Home it work</span>
+          <span class='footer_page_content_text'>Pricing</span>
+          <span class='footer_page_content_text'>Blog</span>
+          <span class='footer_page_content_text'>Demo</span>
+        </div>
+        <div class="pages_col_cont">
+          <span class='footer_col_title'>Contact</span>
+          <div class="footer_contact_cont">
+            <%= image_tag 'callicon.png', alt: 'logo', class: 'app_stores' %>
+            <span class='footer_contact_text'>(714) 477-2877</span>
+          </div>
+          <div class="footer_contact_cont">
+            <%= image_tag 'emailicon.png', alt: 'logo', class: 'app_stores' %>
+            <span class='footer_contact_text'>Healthtoday@gmail.com</span>
+          </div>
+          <div class="footer_contact_cont">
+            <%= image_tag 'emailicon.png', alt: 'logo', class: 'app_stores' %>
+            <span class='footer_contact_text'>1100 W Town and Country Rd Suite 1250 Orange, CA 92868</span>
+          </div>
+        </div>
+        <div class="footer_socials">
+          <span class='footer_col_title'>Contact</span>
+          <div class="footer_social_icons_cont">
+            <%= image_tag 'tiktok.png', alt: 'logo', class: 'footer_social_icons' %>
+            <%= image_tag 'snapchat.png', alt: 'logo', class: 'footer_social_icons' %>
+            <%= image_tag 'facebook.png', alt: 'logo', class: 'footer_social_icons' %>
+            <%= image_tag 'twitter.png', alt: 'logo', class: 'footer_social_icons' %>
+            <%= image_tag 'linkedin.png', alt: 'logo', class: 'footer_social_icons' %>
+            <%= image_tag 'instagram.png', alt: 'logo', class: 'footer_social_icons' %>
+          </div>
+        </div>
+      </div>
+      <div class="footer_btm">
+        <span>© 2024 Telehealth Today, LLC. All Rights Reserved.</span>
+      </div>
+    </footer>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('businesscoach').addEventListener('click', function() {
+          window.location.href = "<%= businesscoaches_path %>";
+        });
+      });
+       document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('businessresource').addEventListener('click', function() {
+          window.location.href = "<%= businessresources_path %>";
+        });
+      });
+    </script>
+  </body>
+</html>
